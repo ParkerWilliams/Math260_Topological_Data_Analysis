@@ -1,7 +1,7 @@
 import numpy as np
 import csv
 
-n = 1000
+n = 300
 
 u = np.random.uniform(0,2*np.pi,n)
 v = np.random.uniform(0,2*np.pi,n)
@@ -18,7 +18,7 @@ for i in range(0,n):
     results.append([x,y,z])
 
 
-with open('clean_results.csv', 'wb') as csvfile:
+with open('clean_results', 'wb') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter=',',quotechar='|', quoting=csv.QUOTE_MINIMAL)
     for row in results:
         spamwriter.writerow(row)
@@ -34,7 +34,7 @@ for i in range(0,n):
 
     results.append([x,y,z])
 
-with open('noisy_results.csv', 'wb') as csvfile:
+with open('noisy_results', 'wb') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter=',',quotechar='|', quoting=csv.QUOTE_MINIMAL)
     for row in results:
         spamwriter.writerow(row)
