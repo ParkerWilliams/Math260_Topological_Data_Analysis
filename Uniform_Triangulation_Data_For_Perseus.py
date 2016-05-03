@@ -1,7 +1,14 @@
 import numpy as np
 import math
+import sys
 
-data = np.load('clean_results.npy')
+#no error handling, for shame
+
+infile = sys.argv[1]
+outfile = sys.argv[2]
+
+
+data = np.load(str(infile))
 
 def k_subsets_i(n, k):
     '''
@@ -42,7 +49,7 @@ for x in k_subsets_i(len(data),3):
     output.append([", ".join(map(str,list(data[first]))),", ".join(map(str,list(data[second]))),", ".join(map(str,list(data[third]))),birthTime])
     print(list(x))
 
-f = open('workfile', 'w')
+f = open(str(outfile), 'w')
 f.write('2\n3\n')
 for l in output:
     outline = (", ".join( repr(e) for e in l ) + '\n')
