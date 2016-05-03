@@ -42,7 +42,7 @@ for x in k_subsets_i(len(data),3):
     output.append([", ".join(map(str,list(data[first]))),", ".join(map(str,list(data[second]))),", ".join(map(str,list(data[third]))),birthTime])
     print(list(x))
 
-f = open('torus', 'w')
+f = open('workfile', 'w')
 f.write('2\n3\n')
 for l in output:
     outline = (", ".join( repr(e) for e in l ) + '\n')

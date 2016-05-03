@@ -1,12 +1,12 @@
 import numpy as np
 import csv
 
-n = 300
+n = 100
 
 u = np.random.uniform(0,2*np.pi,n)
 v = np.random.uniform(0,2*np.pi,n)
 
-a = 1
+a = 4
 b = 1
 
 results = []
@@ -17,11 +17,7 @@ for i in range(0,n):
 
     results.append([x,y,z])
 
-
-with open('clean_results', 'wb') as csvfile:
-    spamwriter = csv.writer(csvfile, delimiter=',',quotechar='|', quoting=csv.QUOTE_MINIMAL)
-    for row in results:
-        spamwriter.writerow(row)
+np.save('torus_no_noise.npy',results)
 
 u = np.random.uniform(0,2*np.pi,n) + np.random.normal(0,1)
 v = np.random.uniform(0,2*np.pi,n) + np.random.normal(0,1)
@@ -34,7 +30,4 @@ for i in range(0,n):
 
     results.append([x,y,z])
 
-with open('noisy_results', 'wb') as csvfile:
-    spamwriter = csv.writer(csvfile, delimiter=',',quotechar='|', quoting=csv.QUOTE_MINIMAL)
-    for row in results:
-        spamwriter.writerow(row)
+np.save('torus_noise.npy',results)
