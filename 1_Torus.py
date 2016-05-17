@@ -1,6 +1,6 @@
 import numpy as np
 
-n = 300
+n = 100
 
 u = np.random.uniform(0,2*np.pi,n)
 v = np.random.uniform(0,2*np.pi,n)

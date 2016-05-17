@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
-data = np.load('1_torus.npy')
+data = np.load('2_Gaussian_blobs_very_far_apart.npy')
 xs = []
 ys = []
 zs = []

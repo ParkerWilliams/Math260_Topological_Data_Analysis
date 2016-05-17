@@ -11,9 +11,9 @@ for i in range(0,n):
     results.append([x, y, z])
 
 for i in range(0, n):
-    x = 100 + np.random.normal(0, 1)
-    y = 100 + np.random.normal(0, 1)
-    z = 100 + np.random.normal(0, 1)
+    x = 10 + np.random.normal(0, 1)
+    y = 10 + np.random.normal(0, 1)
+    z = 10 + np.random.normal(0, 1)
 
     results.append([x, y, z])
 
