@@ -6,7 +6,7 @@ u = np.random.uniform(0,2*np.pi,n)
 v = np.random.uniform(0,2*np.pi,n)
 
 a = 4
-b = .25
+b = 1
 
 results = []
 for i in range(0,n):
@@ -18,9 +18,9 @@ for i in range(0,n):
 
 
 for i in range(0,n):
-    x = 10+(a+b*np.cos(v[i]))*np.cos(u[i])
-    y = 10+(a+b*np.cos(v[i]))*np.sin(u[i])
-    z = 10+b*np.sin(v[i])
+    x = 5+(a+b*np.cos(v[i]))*np.cos(u[i])
+    y = 5+(a+b*np.cos(v[i]))*np.sin(u[i])
+    z = 5+b*np.sin(v[i])
 
     results.append([x,y,z])
 
